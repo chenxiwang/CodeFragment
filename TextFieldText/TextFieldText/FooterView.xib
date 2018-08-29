@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterView">
+            <connections>
+                <outlet property="lablel" destination="9Go-wF-4Wx" id="7fm-6U-oI8"/>
+                <outlet property="swith" destination="nyt-BA-hvb" id="YGC-1R-wcZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是footerView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Go-wF-4Wx">
+                    <rect key="frame" x="128.5" y="27" width="118" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nyt-BA-hvb">
+                    <rect key="frame" x="127" y="92" width="121" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="287-uo-l85"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="0.3411764706" green="0.80392156859999997" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nyt-BA-hvb" firstAttribute="top" secondItem="9Go-wF-4Wx" secondAttribute="bottom" constant="44" id="45t-C1-Twe"/>
+                <constraint firstItem="nyt-BA-hvb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5j1-3a-Z2h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nyt-BA-hvb" secondAttribute="bottom" constant="41" id="jQx-aQ-3Wy"/>
+                <constraint firstItem="9Go-wF-4Wx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nqq-WP-ESz"/>
+                <constraint firstItem="9Go-wF-4Wx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="27" id="wiB-Yc-HDY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-200"/>
+        </view>
+    </objects>
+</document>

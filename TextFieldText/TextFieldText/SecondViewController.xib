@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwx-me-Hpz">
+                    <rect key="frame" x="181" y="249" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5P-8i-s5n">
+                    <rect key="frame" x="56" y="212" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-U4-G2i">
+                    <rect key="frame" x="264" y="174" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X5e-Kq-F2H">
+                    <rect key="frame" x="106" y="158" width="121" height="28"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="cPN-nj-iiF" customClass="ContainerView">
+                    <rect key="frame" x="0.0" y="301" width="375" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nwx-me-Hpz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="181" id="3kb-Ie-C1c"/>
+                <constraint firstItem="Nwx-me-Hpz" firstAttribute="trailing" secondItem="X5e-Kq-F2H" secondAttribute="trailing" id="5Kp-g7-Znf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cPN-nj-iiF" secondAttribute="trailing" id="NcI-pa-yaS"/>
+                <constraint firstItem="cPN-nj-iiF" firstAttribute="top" secondItem="Nwx-me-Hpz" secondAttribute="bottom" constant="22" id="RY6-6C-XoW"/>
+                <constraint firstItem="Nwx-me-Hpz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="249" id="Ul8-1p-3G9"/>
+                <constraint firstItem="cPN-nj-iiF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Z0i-Zn-meX"/>
+                <constraint firstItem="Nwx-me-Hpz" firstAttribute="top" secondItem="X5e-Kq-F2H" secondAttribute="bottom" constant="64" id="z9b-Ms-OSv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
