@@ -87,9 +87,6 @@ static NSString * const kkName = @"kkName";
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:kkName];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    
-    
-    
 }
 
 
