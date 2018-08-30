@@ -55,18 +55,26 @@
     
     
     
+  // [self simpleUsage];
+   
+    [self callBackUsage];
+   
+    
+}
+
+- (void)simpleUsage{
+    Son *s = [Son new];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     if ([s respondsToSelector:@selector(play:)]) {
         [s performSelector:@selector(play:) withObject:@"游戏"];
     }
 #pragma clang diagnostic pop
-   
     
     self.array = [NSMutableArray array];
-
+    
     SEL selector = @selector(study:with:);
-
+    
     
     NSMethodSignature *signature = [Son instanceMethodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
@@ -78,8 +86,8 @@
     [invocation setArgument:&name atIndex:3];
     [invocation retainArguments];
     [self.array addObject:invocation];
-   
-  //  [self.invocation invoke];
+    
+    //  [self.invocation invoke];
     NSInvocation *invocation1 = [NSInvocation invocationWithMethodSignature:signature];
     invocation1.target = s;
     invocation1.selector = selector;
@@ -88,9 +96,8 @@
     [invocation1 setArgument:&lan1 atIndex:2];
     [invocation1 setArgument:&name1 atIndex:3];
     // 防止提前释放参数
-     [invocation1 retainArguments];
+    [invocation1 retainArguments];
     [self.array addObject:invocation1];
-    
 }
 
 - (IBAction)clickAction:(UIButton *)sender {
@@ -101,6 +108,42 @@
     [self.array makeObjectsPerformSelector:@selector(invoke)];
 }
 
+
+/**
+ 可以用来callback
+ */
+- (void)callBackUsage{
+    
+    SEL selector = NSSelectorFromString(@"testMethod:arg2:");
+    
+    NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:selector];
+    
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    invocation.target = self;
+    invocation.selector = selector;
+    
+    [self someAsynMethodWithInvocation:invocation];
+}
+
+- (void)someAsynMethodWithInvocation:(NSInvocation *)invocation{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSString *arg1 = @"参数1";
+        NSString *arg2 = @"参数2";
+        
+        [invocation setArgument:&arg1 atIndex:2];
+        [invocation setArgument:&arg2 atIndex:3];
+        [invocation invoke];
+        
+        
+    });
+    
+}
+
+- (void)testMethod:(NSString *)arg1 arg2:(NSString *)arg2{
+    NSLog(@"testMethod was called,arg1:%@ arg2:%@",arg1,arg2);
+}
 
 
 @end
