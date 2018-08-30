@@ -9,5 +9,7 @@
 #import "Person.h"
 
 @interface Person (AddProperty)
-
+@property (nonatomic, copy  ) NSString *address;
+@property (nonatomic, assign) NSInteger height;
+@property (nonatomic, strong) Person *relativeP;
 @end

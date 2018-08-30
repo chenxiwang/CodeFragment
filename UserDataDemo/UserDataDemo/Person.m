@@ -24,4 +24,12 @@
 - (NSString *)description{
     return [NSString stringWithFormat:@"name:%@--age:%ld",self.name,(long)self.age];
 }
+
+- (void)eat{
+    NSLog(@"eat something");
+}
+
+- (void)play{
+     NSLog(@"play something");
+}
 @end

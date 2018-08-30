@@ -17,6 +17,7 @@
 		0A3D61D92135276300E1F1E6 /* item1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3D61D72135276300E1F1E6 /* item1.storyboard */; };
 		0A3D61DB213528A500E1F1E6 /* item3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3D61DA213528A500E1F1E6 /* item3.storyboard */; };
 		0A7697352133AF110041305B /* LocalArchiverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7697342133AF110041305B /* LocalArchiverManager.m */; };
+		0AC66F7B213692D400D5D427 /* Person+AddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC66F7A213692D400D5D427 /* Person+AddProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		0A3D61DA213528A500E1F1E6 /* item3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = item3.storyboard; sourceTree = "<group>"; };
 		0A7697332133AF110041305B /* LocalArchiverManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalArchiverManager.h; sourceTree = "<group>"; };
 		0A7697342133AF110041305B /* LocalArchiverManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalArchiverManager.m; sourceTree = "<group>"; };
+		0AC66F79213692D400D5D427 /* Person+AddProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+AddProperty.h"; sourceTree = "<group>"; };
+		0AC66F7A213692D400D5D427 /* Person+AddProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+AddProperty.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				0A1CF71521338519008E3022 /* Main.storyboard */,
 				0A3D61D72135276300E1F1E6 /* item1.storyboard */,
 				0A3D61DA213528A500E1F1E6 /* item3.storyboard */,
+				0AC66F79213692D400D5D427 /* Person+AddProperty.h */,
+				0AC66F7A213692D400D5D427 /* Person+AddProperty.m */,
 				0A1CF7182133851A008E3022 /* Assets.xcassets */,
 				0A1CF71A2133851A008E3022 /* LaunchScreen.storyboard */,
 				0A1CF71D2133851A008E3022 /* Info.plist */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A1CF71421338519008E3022 /* ViewController.m in Sources */,
+				0AC66F7B213692D400D5D427 /* Person+AddProperty.m in Sources */,
 				0A1CF71F2133851A008E3022 /* main.m in Sources */,
 				0A1CF72721338533008E3022 /* Person.m in Sources */,
 				0A7697352133AF110041305B /* LocalArchiverManager.m in Sources */,

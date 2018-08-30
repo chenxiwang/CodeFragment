@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "Person+AddProperty.h"
 static NSString * const kkName = @"kkName";
 @interface ViewController ()
 
@@ -21,7 +22,27 @@ static NSString * const kkName = @"kkName";
     
     [self mutableArchiver];
     
+    Person * jack = [Person new];
+    jack.name =@"jack";
+    jack.address = @"Tokyo";
+    jack.height = 85;
+    Person *lucy = [Person new];
+    lucy.name = @"lucy";
+    jack.relativeP =lucy;
+    
+    NSLog(@"person name:%@ height:%ld relative.name:%@",jack.name,(long)jack.height,jack.relativeP.name);
+    
+    
+    SEL selecter = @selector(eat);
+    
+    [self getInstance:jack sel:selecter];
+    
+    [self performSelectorInBackground:<#(nonnull SEL)#> withObject:<#(nullable id)#>];
    
+}
+
+- (void)getInstance:(id)instance sel:(SEL)sel{
+    [instance performSelector:sel];
 }
 
 
