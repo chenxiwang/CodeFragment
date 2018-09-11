@@ -99,3 +99,18 @@ class_copyMethodList函数，返回包含所有实例方法的数组，如果需
 
 ### *class_replaceMethod*
 class_replaceMethod函数，该函数的行为可以分为两种：如果类中不存在name指定的方法，则类似于class_addMethod函数一样会添加方法；如果类中已存在name指定的方法，则类似于method_setImplementation一样替代原方法的实现。
+
+### load 执行顺序
+通过在Category的+ (void)load方法中添加Method Swizzling的代码,在类初始加载时自动被调用,load方法按照父类到子类,类自身到Category的顺序被调用
+
+### runtime如何实现weak变量的自动置nil
+
+id __weak obj1 = obj;
+当我们初始化一个weak变量时，runtime会调用objc_initWeak函数
+objc_initWeak->storeWeak->SideTable->weak_table_t->weak_entry_t
+
+SideTable 引用计数和弱引用依赖表,它主要用于管理对象的引用计数和 weak 表
+weak_table_t 是一个全局弱引用表，以对象地址为key，以weak_entry_t 结构体 为value
+weak_entry_t是存储在弱引用表中的一个内部结构体，它负责维护和存储指向一个对象的所有弱引用hash表
+
+http://ios.jobbole.com/89012/
