@@ -32,6 +32,9 @@
 		0ABD1C3220CFAD1D00775AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD1C3020CFAD1D00775AB8 /* LaunchScreen.storyboard */; };
 		0ABD1C3520CFAD1D00775AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD1C3420CFAD1D00775AB8 /* main.m */; };
 		0ABD1C3E20CFAD4700775AB8 /* YTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD1C3C20CFAD4700775AB8 /* YTTextField.m */; };
+		0AF7569D2148D14000EA0068 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7569C2148D14000EA0068 /* Vehicle.m */; };
+		0AF756A02148D15F00EA0068 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7569F2148D15F00EA0068 /* Car.m */; };
+		0AF756A32148D18000EA0068 /* BMW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF756A22148D18000EA0068 /* BMW.m */; };
 		626547C52D36100718C08E29 /* libPods-TextFieldText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5F62630EA0D696140CA5EF /* libPods-TextFieldText.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,12 @@
 		0ABD1C3420CFAD1D00775AB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ABD1C3C20CFAD4700775AB8 /* YTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTTextField.m; sourceTree = "<group>"; };
 		0ABD1C3D20CFAD4700775AB8 /* YTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTTextField.h; sourceTree = "<group>"; };
+		0AF7569B2148D14000EA0068 /* Vehicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		0AF7569C2148D14000EA0068 /* Vehicle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		0AF7569E2148D15F00EA0068 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		0AF7569F2148D15F00EA0068 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		0AF756A12148D18000EA0068 /* BMW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMW.h; sourceTree = "<group>"; };
+		0AF756A22148D18000EA0068 /* BMW.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMW.m; sourceTree = "<group>"; };
 		323E2D6A672F53E65F221EC7 /* Pods-TextFieldText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextFieldText/Pods-TextFieldText.debug.xcconfig"; sourceTree = "<group>"; };
 		35EEB6EEBFA7734E15155463 /* Pods-TextFieldText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldText.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextFieldText/Pods-TextFieldText.release.xcconfig"; sourceTree = "<group>"; };
 		CC5F62630EA0D696140CA5EF /* libPods-TextFieldText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextFieldText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +161,12 @@
 				0A43935F2122758300AD09F4 /* People.m */,
 				0A4393612122759200AD09F4 /* Man.h */,
 				0A4393622122759200AD09F4 /* Man.m */,
+				0AF7569B2148D14000EA0068 /* Vehicle.h */,
+				0AF7569C2148D14000EA0068 /* Vehicle.m */,
+				0AF7569E2148D15F00EA0068 /* Car.h */,
+				0AF7569F2148D15F00EA0068 /* Car.m */,
+				0AF756A12148D18000EA0068 /* BMW.h */,
+				0AF756A22148D18000EA0068 /* BMW.m */,
 				0ABD1C3B20CFAD4700775AB8 /* YTTextFiled */,
 				0ABD1C2B20CFAD1C00775AB8 /* Main.storyboard */,
 				0ABD1C2E20CFAD1D00775AB8 /* Assets.xcassets */,
@@ -165,8 +180,8 @@
 		0ABD1C3B20CFAD4700775AB8 /* YTTextFiled */ = {
 			isa = PBXGroup;
 			children = (
-				0ABD1C3C20CFAD4700775AB8 /* YTTextField.m */,
 				0ABD1C3D20CFAD4700775AB8 /* YTTextField.h */,
+				0ABD1C3C20CFAD4700775AB8 /* YTTextField.m */,
 			);
 			path = YTTextFiled;
 			sourceTree = "<group>";
@@ -287,6 +302,8 @@
 			files = (
 				0A43933C21211C4000AD09F4 /* Mammal.m in Sources */,
 				0A4393452121616C00AD09F4 /* CustomViewTwo.m in Sources */,
+				0AF7569D2148D14000EA0068 /* Vehicle.m in Sources */,
+				0AF756A02148D15F00EA0068 /* Car.m in Sources */,
 				0A7520B3211D1C9C00C11FA6 /* SecondViewController.m in Sources */,
 				0A4393422121379800AD09F4 /* CustomViewOne.m in Sources */,
 				0ABD1C2A20CFAD1C00775AB8 /* ViewController.m in Sources */,
@@ -301,6 +318,7 @@
 				0ABD1C2720CFAD1C00775AB8 /* AppDelegate.m in Sources */,
 				0A43933921211B4C00AD09F4 /* Animal.m in Sources */,
 				0A400087211C2EB900BB6AA5 /* ContainerView.m in Sources */,
+				0AF756A32148D18000EA0068 /* BMW.m in Sources */,
 				0A7520AF211D1C8F00C11FA6 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

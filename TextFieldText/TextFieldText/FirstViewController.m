@@ -17,37 +17,52 @@
 @implementation FirstViewController
 
 - (instancetype)initWithName:(NSString *)name{
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.name = name;
         NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+        NSLog(@"name:%@",name);
     }
     return self;
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-   self =  [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
-    }
-    return self;
+    
+    return [self initWithName:@"默认名字 frome initWithNibName"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-         NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
-    }
-    return self;
+    
+    return [self initWithName:@"默认名字 frome initWithCoder"];
 }
 
 - (instancetype)init{
-    self = [super init];
-    if (self) {
-         NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
-    }
-    return self;
+    return [self initWithName:@"默认名字 from init"];
 }
+
+//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+//   self =  [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+//    }
+//    return self;
+//}
+//
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//         NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+//    }
+//    return self;
+//}
+//
+//- (instancetype)init{
+//    self = [super init];
+//    if (self) {
+//         NSLog(@"%@ 类 %@ 方法 调用了",NSStringFromClass([self class]),NSStringFromSelector(_cmd));
+//    }
+//    return self;
+//}
 
 /**
  You can override this method in order to create your views manually. If you choose to do so, assign the root view of your view hierarchy to the view property. The views you create should be unique instances and should not be shared with any other view controller object. Your custom implementation of this method should not call super.

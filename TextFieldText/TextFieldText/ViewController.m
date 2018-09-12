@@ -17,6 +17,7 @@
 #import "CustomViewTwo.h"
 #import "Masonry.h"
 #import "Man.h"
+#import "BMW.h"
 @interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *lastBtn;
 
@@ -77,9 +78,11 @@
 //    }];
     
     // 第五种 从xib 加载
-    self.customViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
+   self.customViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
+//
+//    Man *man = [[Man alloc] initWithNoArgument];
     
-    Man *man = [[Man alloc] initWithNoArgument];
+    BMW *b = [[BMW alloc] init];
     
 }
 
@@ -98,11 +101,11 @@
 
 - (IBAction)secondBtnAction:(id)sender {
     
-//    FirstViewController *vc = [[FirstViewController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:vc animated:YES];
+    FirstViewController *vc = [[FirstViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
     
-        SecondViewController *vc = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
+//        SecondViewController *vc = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+//        [self.navigationController pushViewController:vc animated:YES];
     
 
 //    ThirdViewController *vc = [[ThirdViewController alloc] initWithNibName:nil bundle:nil];
